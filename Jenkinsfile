@@ -32,7 +32,7 @@ pipeline {
                             allowMissing         : false,
                             alwaysLinkToLastBuild: false,
                             keepAll              : false,
-                            reportDir            : 'Reports',
+                            reportDir            : 'target',
                             reportFiles          : 'report.html',
                             reportName           : 'Cucumber Extent report',
                             reportTitles         : ''
