@@ -10,7 +10,6 @@ WORKDIR /usr/sapient/demo
 # ADD .jar and libs into this image
 ADD target/org.sapient.selenium.docker.demo-tests.jar 	org.sapient.selenium.docker.demo-tests.jar
 ADD target/libs											libs
-# please ADD any other dependency like .csv / .json / .xls
 
 # ADD suite files
 ADD testng.xml				testng.xml
