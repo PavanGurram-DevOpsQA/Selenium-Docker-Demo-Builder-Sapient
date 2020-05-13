@@ -1,0 +1,13 @@
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/stepDefinitions/Feature01.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/helpers/ConfigFileReader.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/pageObjects/AuthenticationPage.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/stepDefinitions/BeforeAfterHooks.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/managers/DriverManager.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/enums/DriverType.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/managers/PageObjectManager.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/pageObjects/MyAccountPage.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/pageObjects/BasePO.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/helpers/TestContext.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/runners/testRunner1.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/enums/EnvironmentType.java
+/Users/pavgurra/Desktop/SeleniumDockerAWS/AutomationFramework/src/test/java/pageObjects/HomePage.java
