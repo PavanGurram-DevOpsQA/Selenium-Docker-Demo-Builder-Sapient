@@ -5,8 +5,7 @@ pipeline {
         stage('Build Jar') {
             steps {
                 // bat for windows
-//                 sh "mvn clean package -DskipTests"
-                    sh "mvn clean package"
+                sh "mvn clean package -DskipTests"
             }
         }
         stage('Build Image') {
@@ -25,19 +24,4 @@ pipeline {
             }
         }
     }
-
-  post {
-                always {
-                    publishHTML([
-                            allowMissing         : false,
-                            alwaysLinkToLastBuild: false,
-                            keepAll              : false,
-                            reportDir            : 'target/cucumber-reports',
-                            reportFiles          : 'report.html',
-                            reportName           : 'Cucumber Extent report',
-                            reportTitles         : ''
-                    ])
-                }
-            }
-
 }
