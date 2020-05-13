@@ -20,6 +20,7 @@ pipeline {
                     // bat for windows
 			        sh "docker login --username=${user} --password=${pass}"
 			        sh "docker push pavangurram/docker-integration:latest"
+			        sh "docker push pavangurram/docker-integration:${BUILD_NUMBER}"
 			    }
             }
         }
