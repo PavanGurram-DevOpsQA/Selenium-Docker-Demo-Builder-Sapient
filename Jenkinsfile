@@ -24,4 +24,19 @@ pipeline {
             }
         }
     }
+
+  post {
+                always {
+                    publishHTML([
+                            allowMissing         : false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll              : false,
+                            reportDir            : 'target/cucumber-reports',
+                            reportFiles          : 'report.html',
+                            reportName           : 'BDD report',
+                            reportTitles         : ''
+                    ])
+                }
+            }
+
 }
