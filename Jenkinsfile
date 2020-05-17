@@ -1,26 +1,33 @@
 pipeline {
-    // master executor should be set to 0
-    agent any
+    agent none
     stages {
+//     Build Jar for Tests and copy maven dependency jars into 'libs' folder to push to image, but not to repo
         stage('Build Jar') {
+            agent {
+                docker {
+                    image 'maven:3-alpine'
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }
             steps {
-                // bat for windows
-                sh "mvn clean package -DskipTests"
+                sh 'mvn clean package -DskipTests'
             }
         }
         stage('Build Image') {
             steps {
-                // bat for windows
-                sh "docker build -t='pavangurram/docker-integration' ."
+                script {
+                	app = docker.build("pavangurram/docker-integration")
+                }
             }
         }
         stage('Push Image') {
             steps {
-			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                    // bat for windows
-			        sh "docker login --username=${user} --password=${pass}"
-			        sh "docker push pavangurram/docker-integration:latest"
-			    }
+                script {
+			        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+			        	app.push("${BUILD_NUMBER}")
+			            app.push("latest")
+			        }
+                }
             }
         }
     }

@@ -22,6 +22,11 @@
 	sudo chmod 777 /Users/pavgurra/Desktop/SeleniumDockerAWS/Jenkins-Directory
 12. Go to above path where you created folder Jenkins-Directory and run this command. Run Jenkins Container --> 
     docker run -p 8050:8080 -p 50000:50000 -v "$PWD/Jenkins-Master:/var/jenkins_home" jenkins/jenkins:lts
-
+13. Enable SSH with port 22 to your ip address. Logon to box using ssh -i <.pem file> <ec2-user>@<public ip address of ec2 instance> eg: ssh -i ec2-user.pem ec2-user@312.234.213.435
+    Make your pem file private using command: sudo chmod 400 ec2-user.pem
+14. Install Java8 on Slave using below commands
+        sudo yum update -y
+        sudo yum remove java -y
+        sudo yum install java-1.8.0-openjdk -y
     
     
